@@ -8,6 +8,9 @@ def process_line(line):
 
     cmd, text = line.split(" ", maxsplit=1)
 
+    if cmd == "uppercase":
+        return text.upper()
+
     return "Unknown command " + cmd
 
 
