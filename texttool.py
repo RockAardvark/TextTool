@@ -13,8 +13,12 @@ def process_line(line):
     if cmd == "lowercase":
         return text.lower()
 
-    return "Unknown command " + cmd
+    # >>> AJOUT DE L'UTILISATEUR A (length)
+    if cmd == "length": # L'utilisateur A rajoute une commande length
+        return len(text)
+    # <<<
 
+    return "Unknown command " + cmd
 
 
 def main():
