@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-    "count-words": lambda text: len(text.split()),
 
 def process_line(line):
     if " " not in line:
@@ -11,6 +10,8 @@ def process_line(line):
         return text.upper()
     if cmd == "lowercase":
         return text.lower()
+    if cmd == "count-words":
+        return len(text.split())
 
     return "Unknown command " + cmd
 
