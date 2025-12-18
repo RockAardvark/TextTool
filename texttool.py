@@ -14,8 +14,10 @@ def process_line(line):
         return text.upper()
     if cmd == "lowercase":
         return text.lower()
-    if cmd == "count-words":
-        return len(text.split())
+    if cmd == "length":
+        return len(text)
+    if cmd == "prefix":
+        return text[:10]
 
     # >>> AJOUT DE L'UTILISATEUR A (length)
     if cmd == "length": # L'utilisateur A rajoute une commande length
