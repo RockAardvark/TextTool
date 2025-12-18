@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 
+"""
+Ce module fournit une suite d'outils en ligne de commande pour la manipulation de texte.
+Il permet d'effectuer des opérations telles que la mise en majuscules, en minuscules,
+le calcul de longueur ou l'ajout de préfixes sur des chaînes de caractères.
+"""
+
+
 def process_line(line):
     """
     Traite une ligne de texte, extrait la commande et l'argument, 
@@ -14,8 +21,10 @@ def process_line(line):
         return text.upper()
     if cmd == "lowercase":
         return text.lower()
-    if cmd == "count-words":
-        return len(text.split())
+    if cmd == "length":
+        return len(text)
+    if cmd == "prefix":
+        return text[:10]
 
     # >>> AJOUT DE L'UTILISATEUR A (length)
     if cmd == "length": # L'utilisateur A rajoute une commande length
@@ -33,6 +42,11 @@ def main():
 
         print(process_line(line))
 
+"""
+    Point d'entrée principal du script.
+    Gère l'analyse des arguments de la ligne de commande, lit l'entrée standard
+    et affiche les résultats transformés sur la sortie standard.
+    """
 
 if __name__ == "__main__":
     main()
