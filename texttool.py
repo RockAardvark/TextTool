@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-
-
 def process_line(line):
     if " " not in line:
         return "No command or no argument given"
